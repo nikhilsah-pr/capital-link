@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #071A36;
+  --color-secondary: #0D2B57;
+  --color-accent-gold: #D4AF37;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #F8FAFC;
+  color: #1E293B;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins);
+}
+
+@utility text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+@utility text-gradient-gold {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #D4AF37, #F1D570);
+}
+
+@utility bg-gradient-primary {
+  background-image: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));
+}
+
+@utility bg-gradient-gold {
+  background-image: linear-gradient(to right, #D4AF37, #F1D570);
+}
+
+@utility glass-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+
+@utility glass-card-dark {
+  background-color: rgba(7, 26, 54, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Equal height for all Swiper testimonial cards */
+#testimonials .swiper-wrapper {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+#testimonials .swiper-slide {
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+#testimonials .swiper-slide > div {
+  width: 100% !important;
+  height: 100% !important;
+}
